@@ -38,11 +38,14 @@ fun main(args: Array<String>) {
     println("div: "+div)
 
     // second
-    var op2=MultiOperations1()
+    var op2=MultiOperations1() as Operations1
     sum= op2.sum(10,15)
     println("sum: "+sum)
     div= op2.div(12,11)
     println("div: "+div)
+    // cannot call fuction sub and mul
+    // because casting by class operatios,
+    // but funtion overriding is still running
 
 
 }
