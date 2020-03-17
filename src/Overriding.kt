@@ -45,7 +45,7 @@ fun main(args: Array<String>) {
     println("div: "+div)
     // cannot call fuction sub and mul
     // because casting by class operatios,
-    // but funtion overriding is still running
+    // but function overriding is still running
 
 
 }
