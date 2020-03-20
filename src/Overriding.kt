@@ -2,7 +2,7 @@
 * Created by lukman on 18/03/20 / 03.35
 * Project Name : KotlinBasic
 */
-open class Operations1(){  // open -> this class can inheritance
+open class Operations1(Name:String){  // open -> this class can inheritance
 
     open fun sum(n1:Int, n2:Int):Int{
         return n1+n2
@@ -12,9 +12,15 @@ open class Operations1(){  // open -> this class can inheritance
     }
 }
 
-class MultiOperations1():Operations1(){
+class MultiOperations1:Operations1{
+    constructor(): super("lukman"){
 
+    }
+    var t:Int?=null
     override fun sum(n1:Int, n2:Int):Int{
+        this.t
+        this.sub(n1, n2)
+        super.sum(n1, n2)
         return n1+n2*3
     }
 
@@ -31,7 +37,7 @@ class MultiOperations1():Operations1(){
 
 fun main(args: Array<String>) {
 
-    var op=Operations1()
+    var op=Operations1("lukman")
     var sum= op.sum(10,15)
     println("sum: "+sum)
     var div= op.div(12,11)
